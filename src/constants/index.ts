@@ -16,7 +16,7 @@ export const navLinks = [
 // projects
 export const projects = [
   {
-    id: "cmc3asq4s0000ij9kgm5xqbou",
+    id: "cmcgf46iu0000l50a3lq0fs9b",
     shortTitle: "Hireek - SaaS Recruitment Platform",
     shortDescription:
       "A full-featured SaaS recruitment platform built with Next.js 15, TailwindCSS, and Prisma. It connects companies and job seekers through a seamless hiring experience.",
@@ -34,8 +34,8 @@ export const projects = [
       "Vercel",
     ],
     thumbnailUrl:
-      "https://6sn8pk7mrd.ufs.sh/f/1T4FQGtliscoDdnZ2d92dY8puAlEI1BZ6WzRyNKwJMf7jrDs", // replace with your actual image path
-    demoLink: "https://hireek.vercel.app", // or your actual live URL
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLcixdbTkM1TDQt4evgSYxW7lfu32BjAdPULyO", // replace with your actual image path
+    demoLink: "https://hireek-platform.vercel.app/", // or your actual live URL
     githubLink: "https://github.com/ayoubhayda/hireek-platform",
   },
   {
