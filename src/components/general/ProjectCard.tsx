@@ -13,7 +13,7 @@ interface Project {
   shortTitle: string;
   shortDescription: string;
   thumbnailUrl: string;
-  demoLink: string;
+  demoLink: string | null;
   githubLink: string;
   technologies: string[];
 }
