@@ -65,17 +65,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block" />
 
           <div className="absolute inset-0 hidden md:flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-8 group-hover:translate-y-0 ">
-            <motion.a
-              href={project.demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white backdrop-blur-sm text-black px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Eye className="w-4 h-4" />
-              Live Demo
-            </motion.a>
+            {project.demoLink ? (
+              <motion.a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white backdrop-blur-sm text-black px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Eye className="w-4 h-4" />
+                Live Demo
+              </motion.a>
+            ) : null}
 
             <motion.a
               href={project.githubLink}
@@ -129,20 +131,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="space-y-4">
             {/* Primary Action Buttons - Always Visible */}
             <div className="flex md:hidden gap-3">
-              <motion.a
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${buttonVariants({
-                  variant: "default",
-                  size: "lg",
-                })} flex-1 text-white !shadow-none`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Eye className="w-4 h-4" />
-                Live Demo
-              </motion.a>
+              {project.demoLink ? (
+                <motion.a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${buttonVariants({
+                    variant: "default",
+                    size: "lg",
+                  })} flex-1 text-white !shadow-none`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Eye className="w-4 h-4" />
+                  Live Demo
+                </motion.a>
+              ) : null}
 
               <motion.a
                 href={project.githubLink}
