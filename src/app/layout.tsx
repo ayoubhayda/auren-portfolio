@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Auren",
-  description: "AlphaQuiz est une plateforme interactive pour tester vos connaissances en algorithmique, Python, JavaScript, PHP et MySQL",
+  title: "Ayoub Hayda | Full Stack Developer Portfolio – Auren",
+  description: "Explore Auren – the personal portfolio of Ayoub Hayda, a full stack web developer. Showcasing projects, skills, services, testimonials, and more. Built with Next.js, Tailwind CSS, and modern technologies.",
 };
 
 export default function RootLayout({
