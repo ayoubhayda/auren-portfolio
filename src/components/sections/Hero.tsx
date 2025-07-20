@@ -4,7 +4,7 @@ import React, { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-import avatar from "@/assets/public/avatar-photo.png";
+import avatar from "@/assets/public/avatar-green.png";
 import Image from "next/image";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 
