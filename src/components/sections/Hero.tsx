@@ -1,10 +1,10 @@
-//hero Section
 "use client";
 import React, { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-import avatar from "@/assets/public/avatar-green.png";
+import lightAvatar from "@/assets/public/avatar-green-light.png";
+import darkAvatar from "@/assets/public/avatar-green-dark.png";
 import Image from "next/image";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 
@@ -96,11 +96,19 @@ const Hero = () => {
             transition={{ duration: 0.2 }}
           >
             <Image
-              src={avatar}
+              src={lightAvatar}
               alt="Ayoub Hayda"
               width={112}
               height={112}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover dark:hidden"
+              priority
+            />
+            <Image
+              src={darkAvatar}
+              alt="Ayoub Hayda"
+              width={112}
+              height={112}
+              className="w-full h-full object-cover hidden dark:block"
               priority
             />
           </motion.div>
