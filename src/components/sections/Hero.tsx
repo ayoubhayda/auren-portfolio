@@ -153,7 +153,7 @@ const Hero = () => {
         >
           <motion.div variants={buttonVariants}>
             <Button size="lg" className=" text-white px-6 shadow-none cursor-pointer" asChild>
-              <a href="https://6sn8pk7mrd.ufs.sh/f/1T4FQGtlisco7lF8VkI4WgC0j63bhJXpiurTeRzy5mVkGwfK" rel="noreferrer" target={"_blank"} download>
+              <a href="https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLcsKZ7YkM1TDQt4evgSYxW7lfu32BjAdPULyO" rel="noreferrer" target={"_blank"} download>
                 <Download className="mr-1 h-4 w-4" />
                 Download Resume
               </a>
