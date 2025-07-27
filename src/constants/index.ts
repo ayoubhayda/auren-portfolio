@@ -119,7 +119,7 @@ export const projects = [
       "Cloudinary",
     ],
     thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLPUREpY4dRAMsF9nU1txgmb64qDEIT8uYzX7W",
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLpjYp6LbjBVTlGf8EAorpwKdReI4QSWxatqPb",
     demoLink: null,
     githubLink: "https://github.com/ayoubhayda/FileMaster",
   },
@@ -139,7 +139,7 @@ export const projects = [
       "Vercel",
     ],
     thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLCRTOHDenp61PaUSRN4jEY75d3eLX8vVoW9JC",
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkL3qDj0WAuXPD27OKExmdsQHFGoakZYpRVqA0g",
     demoLink: "https://ai-startup-landing-page-sand.vercel.app",
     githubLink: "https://github.com/ayoubhayda/ai-startup-landing-page",
   },
