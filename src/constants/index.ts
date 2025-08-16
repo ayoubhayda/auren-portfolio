@@ -39,6 +39,26 @@ export const projects = [
     githubLink: "https://github.com/ayoubhayda/hireek-platform",
   },
   {
+    id: "cmee8m6g00000l2045mb556e1",
+    shortTitle: "Nakhil - Restaurant & Café Website",
+    shortDescription:
+      "A modern multi-page restaurant and café website built with Next.js, Tailwind CSS, Shadcn UI, TypeScript, and Framer Motion. It showcases menus, reservations, testimonials, gallery, and more with responsive design and light/dark mode support.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Framer Motion",
+      "Git",
+      "Github",
+      "Vercel",
+    ],
+    thumbnailUrl:
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLl3g8p1E0YmU3nCVXHZNTjMx794vOIPEcgA6d",
+    demoLink: "https://nakheel-restaurant-cafe.vercel.app",
+    githubLink: "https://github.com/ayoubhayda/nakheel-restaurant-cafe",
+  },
+  {
     id: "cmcncvwmt0000la04iwno1egf",
     shortTitle: "AlphaQuiz - Web Testing Platform for Trainees",
     shortDescription:
@@ -80,27 +100,7 @@ export const projects = [
     demoLink: "https://modern-hoobank-vite.netlify.app",
     githubLink: "https://github.com/ayoubhayda/hooBank-Responsive-Website",
   },
-  {
-    id: "cmcnl36wg0000l504uq0gjyz7",
-    shortTitle: "Argon - Admin Dashboard",
-    shortDescription:
-      "A modern admin dashboard template built with React.js, Vite, and Material UI. It includes dark/light themes and powerful tools like DataGrid, FullCalendar, and responsive charts.",
-    technologies: [
-      "React.js",
-      "Typescript",
-      "Material UI",
-      "Chart.js",
-      "Vite",
-      "Node.js",
-      "npm",
-      "Git",
-      "Vercel",
-    ],
-    thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkL3zyh6jAuXPD27OKExmdsQHFGoakZYpRVqA0g",
-    demoLink: "https://argon-admin-dashboard.web.app",
-    githubLink: "https://github.com/ayoubhayda/react-admin-dashboard",
-  },
+  
   {
     id: "cmcnlqcxo0000lb04gp1n6g8w",
     shortTitle: "FileMaster - Document Management System",
