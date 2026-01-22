@@ -35,12 +35,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.10.0
- * Query Engine version: aee10d5a411e4360c6d3445ce4810ca65adbf3e8
+ * Prisma Client JS version: 6.8.2
+ * Query Engine version: 2060c79ba17c6bb9f5823312b6f6b7f4a845738e
  */
 Prisma.prismaVersion = {
-  client: "6.10.0",
-  engine: "aee10d5a411e4360c6d3445ce4810ca65adbf3e8"
+  client: "6.8.2",
+  engine: "2060c79ba17c6bb9f5823312b6f6b7f4a845738e"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -185,7 +185,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/ayoubhayda/Documents/Projects-Library/auren/src/generated/prisma",
+      "value": "/home/ayoubhayda/Documents/Projects-Library/Other Variantes/auren-portfolio/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -199,20 +199,20 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/ayoubhayda/Documents/Projects-Library/auren/prisma/schema.prisma",
+    "sourceFilePath": "/home/ayoubhayda/Documents/Projects-Library/Other Variantes/auren-portfolio/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../../prisma",
-  "clientVersion": "6.10.0",
-  "engineVersion": "aee10d5a411e4360c6d3445ce4810ca65adbf3e8",
+  "clientVersion": "6.8.2",
+  "engineVersion": "2060c79ba17c6bb9f5823312b6f6b7f4a845738e",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {

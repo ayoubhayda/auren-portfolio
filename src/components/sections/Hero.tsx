@@ -3,8 +3,7 @@ import React, { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-import lightAvatar from "@/assets/public/avatar-green-light.png";
-import darkAvatar from "@/assets/public/avatar-green-dark.png";
+import Avatar from "@/assets/public/avatar.png";
 import Image from "next/image";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 
@@ -20,7 +19,7 @@ const Hero = () => {
       "testimonials",
       "contact",
     ],
-    []
+    [],
   );
 
   const { scrollToSection } = useSectionNavigation(sectionIds);
@@ -90,25 +89,17 @@ const Hero = () => {
         <motion.div variants={itemVariants} className="mb-6">
           {/* Photo */}
           <motion.div
-            className="size-24 md:size-28 rounded-full overflow-hidden mb-6 mx-auto"
+            className="size-24 md:size-28 rounded-full border-2 border-primary overflow-hidden mb-6 mx-auto"
             variants={imageVariants}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
             <Image
-              src={lightAvatar}
+              src={Avatar}
               alt="Ayoub Hayda"
               width={112}
               height={112}
-              className="w-full h-full object-cover dark:hidden"
-              priority
-            />
-            <Image
-              src={darkAvatar}
-              alt="Ayoub Hayda"
-              width={112}
-              height={112}
-              className="w-full h-full object-cover hidden dark:block"
+              className="w-full h-full object-cover"
               priority
             />
           </motion.div>
@@ -152,8 +143,17 @@ const Hero = () => {
           variants={itemVariants}
         >
           <motion.div variants={buttonVariants}>
-            <Button size="lg" className=" text-white px-6 shadow-none cursor-pointer" asChild>
-              <a href="https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLba2eufGMutRgEr6TP3KoQOCfd2ZlB79WGiwq" rel="noreferrer" target={"_blank"} download>
+            <Button
+              size="lg"
+              className=" text-white px-6 shadow-none cursor-pointer"
+              asChild
+            >
+              <a
+                href="https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLba2eufGMutRgEr6TP3KoQOCfd2ZlB79WGiwq"
+                rel="noreferrer"
+                target={"_blank"}
+                download
+              >
                 <Download className="mr-1 h-4 w-4" />
                 Download Resume
               </a>
