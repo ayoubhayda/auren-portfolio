@@ -81,24 +81,26 @@ export const projects = [
     githubLink: "https://github.com/ayoubhayda/AlphaQuiz",
   },
   {
-    id: "cmcndrryc0000l504k7ewzejj",
-    shortTitle: "HooBank - Modern Banking Landing Page",
+    id: "cmkppkfyu0000jx045hq0c2dl",
+    shortTitle: "Adex – Law Firm Website",
     shortDescription:
-      "A fully responsive modern banking website built with React.js, Vite, and Tailwind CSS. It delivers sleek UI/UX, reusable components, and a professional layout showcasing features, stats, and testimonials.",
+      "A bilingual, fully responsive website for a Saudi Arabian law firm, developed using Next.js, TypeScript, Tailwind CSS, Shadcn UI, and Framer Motion. It features pages such as Home, About, Services, Blog, and Contact, along with consultation booking functionality and support for light and dark modes.",
     technologies: [
-      "React.js",
-      "Typescript",
+      "Next.js",
       "TailwindCSS",
-      "Vite",
-      "Node.js",
-      "npm",
+      "shadcn/ui",
+      "Auth.js",
+      "Prisma",
+      "Neon",
+      "UploadThings",
       "Git",
+      "pnpm",
       "Vercel",
     ],
     thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLl8R5XDE0YmU3nCVXHZNTjMx794vOIPEcgA6d",
-    demoLink: "https://modern-hoobank-vite.netlify.app",
-    githubLink: "https://github.com/ayoubhayda/hooBank-Responsive-Website",
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkL9mewraxkefBwU3ROjZECvyaDTsucgJF4Aiz6",
+    demoLink: "https://adex-law.vercel.app",
+    githubLink: "https://github.com/ayoubhayda/adlex-law-website",
   },
   
   {
