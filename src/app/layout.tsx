@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Ayoub Hayda",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://ayoub-hayda.vercel.app/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Ayoub Hayda – Full Stack Developer Portfolio",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Ayoub Hayda | Full Stack Developer",
     description:
       "Full Stack Developer building scalable SaaS and modern web products.",
-    images: ["/og-image.png"],
+    images: ["https://ayoub-hayda.vercel.app/opengraph-image.png"],
   },
 };
 
