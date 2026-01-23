@@ -185,7 +185,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/ayoubhayda/Documents/Projects-Library/Other Variantes/auren-portfolio/src/generated/prisma",
+      "value": "/home/ayoubhayda/Documents/Projects-Library/auren-portfolio/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -199,7 +199,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/ayoubhayda/Documents/Projects-Library/Other Variantes/auren-portfolio/prisma/schema.prisma",
+    "sourceFilePath": "/home/ayoubhayda/Documents/Projects-Library/auren-portfolio/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

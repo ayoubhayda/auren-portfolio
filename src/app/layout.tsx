@@ -15,8 +15,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ayoub Hayda | Full Stack Developer Portfolio – Auren",
-  description: "Explore Auren – the personal portfolio of Ayoub Hayda, a full stack web developer. Showcasing projects, skills, services, testimonials, and more. Built with Next.js, Tailwind CSS, and modern technologies.",
+  title: "Ayoub Hayda | Full Stack Developer (SaaS & Modern Web)",
+  description:
+    "Full Stack Developer helping businesses build scalable SaaS and modern web products using Next.js and TypeScript.",
+
+  metadataBase: new URL("https://ayoub-hayda.vercel.app"),
+
+  keywords: [
+    "Full Stack Developer",
+    "SaaS Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Modern Web Applications",
+  ],
+
+  openGraph: {
+    title: "Ayoub Hayda | Full Stack Developer",
+    description:
+      "I help businesses build scalable SaaS and modern web products.",
+    url: "https://ayoub-hayda.vercel.app",
+    siteName: "Ayoub Hayda",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ayoub Hayda – Full Stack Developer Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ayoub Hayda | Full Stack Developer",
+    description:
+      "Full Stack Developer building scalable SaaS and modern web products.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
