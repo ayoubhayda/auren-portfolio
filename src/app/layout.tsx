@@ -30,11 +30,11 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Ayoub Hayda | Full Stack Developer",
+    title: "Ayoub Hayda | Full Stack Developer (SaaS & Modern Web)",
     description:
       "I help businesses build scalable SaaS and modern web products.",
     url: "https://ayoub-hayda.vercel.app",
-    siteName: "Ayoub Hayda",
+    siteName: "Auren",
     images: [
       {
         url: "https://ayoub-hayda.vercel.app/opengraph-image.png",
