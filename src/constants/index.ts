@@ -42,7 +42,7 @@ export const projects = [
     githubLink: "https://github.com/ayoubhayda/assil-honey-store",
   },
   {
-    id: "cmcnlqcxo0000lb04gp1n6g8w",
+    id: "cmmea4ync0000js04yzd0dvjv",
     shortTitle: "Firmen Law – Law Firm Website",
     shortDescription:
       "A modern bilingual law firm website built with Next.js, TypeScript, and Tailwind CSS. It features consultation booking, a legal blog, WhatsApp integration, and full Arabic and English language support with responsive design.",
