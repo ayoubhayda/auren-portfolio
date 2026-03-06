@@ -16,6 +16,78 @@ export const navLinks = [
 // projects
 export const projects = [
   {
+    id: "cmme9c3aq0000l404sfb1uu1m",
+    shortTitle: "Assil – Premium Honey E-Commerce Store",
+    shortDescription:
+      "A modern full-stack e-commerce platform for selling premium honey products, built with Next.js, TypeScript, Tailwind CSS, Prisma, and PostgreSQL. It features a responsive storefront with Arabic and French support, a complete shopping cart system, and a powerful admin dashboard for managing products, orders, and analytics.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "shadcn/ui",
+      "Prisma",
+      "PostgreSQL",
+      "Neon",
+      "NextAuth",
+      "Framer Motion",
+      "Recharts",
+      "ApexCharts",
+      "UploadThing",
+      "Vercel",
+    ],
+    thumbnailUrl:
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLluTmnfE0YmU3nCVXHZNTjMx794vOIPEcgA6d", // replace with your actual image path
+    demoLink: "https://assilhoney.vercel.app", // or your actual live URL
+    githubLink: "https://github.com/ayoubhayda/assil-honey-store",
+  },
+  {
+    id: "cmcnlqcxo0000lb04gp1n6g8w",
+    shortTitle: "Firmen Law – Law Firm Website",
+    shortDescription:
+      "A modern bilingual law firm website built with Next.js, TypeScript, and Tailwind CSS. It features consultation booking, a legal blog, WhatsApp integration, and full Arabic and English language support with responsive design.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "shadcn/ui",
+      "Radix UI",
+      "Framer Motion",
+      "React Hook Form",
+      "Zod",
+      "Nodemailer",
+      "Vercel Analytics",
+      "Vercel",
+    ],
+    thumbnailUrl:
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLkEM9pE3AVQkLtj7uImzwr32JpYHohgs68acZ",
+    demoLink: "https://firmen.vercel.app/",
+    githubLink: "https://github.com/ayoubhayda/firmen-law-website",
+  },
+  {
+    id: "cmme9vu1c0000l704wo2bhzbf",
+    shortTitle: "Diraya – Law Firm Website",
+    shortDescription:
+      "A modern bilingual law firm website developed for a Moroccan legal practice in Rabat. Built with Next.js, TypeScript, and Tailwind CSS, the platform features consultation booking, a legal blog, Arabic and English support, and a fully responsive professional design.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "shadcn/ui",
+      "Radix UI",
+      "Framer Motion",
+      "React Hook Form",
+      "Zod",
+      "Vercel",
+    ],
+    thumbnailUrl:
+      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLMA5H4iJJAzfUwq6HsOILelGuFk47SmjWyBrh",
+    demoLink: "https://dirayaa.vercel.app",
+    githubLink: "https://github.com/ayoubhayda/diraya-law-firm-website",
+  },
+  {
     id: "cmcgf46iu0000l50a3lq0fs9b",
     shortTitle: "Hireek - SaaS Recruitment Platform",
     shortDescription:
@@ -79,71 +151,6 @@ export const projects = [
       "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLkzdf4p3AVQkLtj7uImzwr32JpYHohgs68acZ",
     demoLink: "https://alpha-quiz-theta.vercel.app",
     githubLink: "https://github.com/ayoubhayda/AlphaQuiz",
-  },
-  {
-    id: "cmkppkfyu0000jx045hq0c2dl",
-    shortTitle: "Adex – Law Firm Website",
-    shortDescription:
-      "A bilingual, fully responsive website for a Saudi Arabian law firm, developed using Next.js, TypeScript, Tailwind CSS, Shadcn UI, and Framer Motion. It features pages such as Home, About, Services, Blog, and Contact, along with consultation booking functionality and support for light and dark modes.",
-    technologies: [
-      "Next.js",
-      "TailwindCSS",
-      "shadcn/ui",
-      "Auth.js",
-      "Prisma",
-      "Neon",
-      "UploadThings",
-      "Git",
-      "pnpm",
-      "Vercel",
-    ],
-    thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkL9mewraxkefBwU3ROjZECvyaDTsucgJF4Aiz6",
-    demoLink: "https://adex-law.vercel.app",
-    githubLink: "https://github.com/ayoubhayda/adlex-law-website",
-  },
-  
-  {
-    id: "cmcnlqcxo0000lb04gp1n6g8w",
-    shortTitle: "FileMaster - Document Management System",
-    shortDescription:
-      "A collaborative document management system built with Laravel, TailwindCSS, and MySQL. It enables efficient, secure, and scalable handling of organizational documents.",
-    technologies: [
-      "Laravel",
-      "Mysql",
-      "Tailwind Css",
-      "Javascript",
-      "Php",
-      "Sass",
-      "Git",
-      "Github",
-      "npm",
-      "Cloudinary",
-    ],
-    thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkLpjYp6LbjBVTlGf8EAorpwKdReI4QSWxatqPb",
-    demoLink: null,
-    githubLink: "https://github.com/ayoubhayda/FileMaster",
-  },
-  {
-    id: "cmcnmhggs0000l7044refq38o",
-    shortTitle: "AI Startup - Landing Page for SaaS Product",
-    shortDescription:
-      "A modern landing page for a SaaS AI product, built using Next.js, TailwindCSS, Shadcn UI, and Framer Motion to deliver smooth, engaging animations and an elegant user interface.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Framer Motion",
-      "Git",
-      "Github",
-      "Vercel",
-    ],
-    thumbnailUrl:
-      "https://u32tyflba0.ufs.sh/f/kc5DWd3AVQkL3qDj0WAuXPD27OKExmdsQHFGoakZYpRVqA0g",
-    demoLink: "https://ai-startup-landing-page-sand.vercel.app",
-    githubLink: "https://github.com/ayoubhayda/ai-startup-landing-page",
   },
 ];
 
