@@ -158,7 +158,7 @@ const MainHero = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-68px)] md:h-[calc(100vh-76px)] flex items-center px-4 overflow-hidden">
+    <div className="h-[calc(100vh-68px)] md:h-[calc(100vh-76px)] flex items-center px-4 ">
       {/* ═══════════════════════════════════════════════════════════
           MOBILE LAYOUT (< 768px) — Ultra-minimal, centered
        ═══════════════════════════════════════════════════════════ */}
@@ -470,7 +470,7 @@ const MainHero = () => {
                   index === 0
                     ? "top-[6%] -left-[8%]"
                     : index === 1
-                      ? "top-[42%] -right-[15%]"
+                      ? "top-[42%] -right-[10%] 2xl:-right-[15%]"
                       : "bottom-[8%] -left-[10%]"
                 }`}
                 variants={floatCardVariants}
