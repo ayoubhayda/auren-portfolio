@@ -91,7 +91,7 @@ const ContactMe = () => {
   };
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -157,7 +157,7 @@ const ContactMe = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 relative overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto relative z-10"
         variants={containerVariants}
@@ -166,19 +166,22 @@ const ContactMe = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Section Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
+        <motion.div
+          className="text-center mb-10 md:mb-16"
+          variants={itemVariants}
+        >
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-6"
             variants={itemVariants}
           >
-            <Mail className="w-4 h-4 text-primary" />
-            <span className="text-primary font-medium text-sm">
+            <Mail className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+            <span className="text-primary font-medium text-xs md:text-sm">
               Get In Touch
             </span>
           </motion.div>
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
             variants={itemVariants}
           >
             Let&apos;s Work{" "}
@@ -188,7 +191,7 @@ const ContactMe = () => {
           </motion.h2>
 
           <motion.p
-            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed hidden md:block"
             variants={itemVariants}
           >
             Have a project in mind? I&apos;d love to hear about it. Send me a
@@ -196,13 +199,15 @@ const ContactMe = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12">
           {/* Contact Form */}
           <motion.div className="lg:col-span-3" variants={itemVariants}>
-            <motion.div className="bg-card/50 backdrop-blur-xl border border-border rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
+            <motion.div className="bg-card/50 backdrop-blur-xl border border-border rounded-xl md:rounded-2xl p-5 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+                Send Me a Message
+              </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name Field */}
                   <div className="space-y-2">
@@ -339,8 +344,10 @@ const ContactMe = () => {
           <motion.div className="lg:col-span-2" variants={itemVariants}>
             <div className="space-y-4">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+                  Contact Information
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   Feel free to reach out through any of these channels. I&apos;m
                   always excited to discuss new opportunities and projects.
                 </p>
@@ -350,18 +357,18 @@ const ContactMe = () => {
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-card/30 backdrop-blur-sm border border-border hover:border-primary/30 hover:bg-card/50 transition-all duration-300 group"
+                    className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-card/30 backdrop-blur-sm border border-border hover:border-primary/30 hover:bg-card/50 transition-all duration-300 group"
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <info.icon className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <info.icon className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                     </div>
                     <div>
                       <div className="font-medium text-sm text-muted-foreground">
                         {info.label}
                       </div>
-                      <div className="text-foreground group-hover:text-primary transition-colors">
+                      <div className="text-foreground text-sm md:text-base group-hover:text-primary transition-colors">
                         {info.value}
                       </div>
                     </div>
@@ -371,16 +378,16 @@ const ContactMe = () => {
 
               {/* Availability Status */}
               <motion.div
-                className="p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20"
+                className="p-4 md:p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20"
                 variants={itemVariants}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                  <span className="font-semibold text-green-600 dark:text-green-400">
+                <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500 animate-pulse"></div>
+                  <span className="font-semibold text-sm md:text-base text-green-600 dark:text-green-400">
                     Available for new projects
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs md:text-sm text-muted-foreground">
                   I&apos;m currently accepting new client work and would love to
                   hear about your next project.
                 </p>

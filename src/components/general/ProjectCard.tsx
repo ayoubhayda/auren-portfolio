@@ -5,7 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { Github, Eye, ArrowRight, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { buttonVariants } from "../ui/button";
+
 import Link from "next/link";
 
 interface Project {
@@ -54,9 +54,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           />
 
           {/* Project Status Badge */}
-          <div className="absolute top-4 right-4 flex gap-2">
-            <Badge className="bg-green-500/20 text-green-400 border-green-500/30 backdrop-blur-sm text-xs font-medium px-2 py-1">
-              <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-1.5 animate-pulse" />
+          <div className="absolute top-3 right-3 md:top-4 md:right-4 flex gap-2">
+            <Badge className="bg-green-500/20 text-green-400 border-green-500/30 backdrop-blur-sm text-[10px] md:text-xs font-medium px-1.5 py-0.5 md:px-2 md:py-1">
+              <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-green-400 rounded-full mr-1 md:mr-1.5 animate-pulse" />
               Live
             </Badge>
           </div>
@@ -94,25 +94,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
 
         {/* Project Details */}
-        <div className="p-6">
+        <div className="p-4 md:p-6">
           <Link
-            className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-200 line-clamp-1"
+            className="text-base md:text-xl font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors duration-200 line-clamp-1"
             href={`/project/${project.id}`}
           >
             {project.shortTitle}
           </Link>
 
-          <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
+          <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-4 line-clamp-2 md:line-clamp-3">
             {project.shortDescription}
           </p>
 
           {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6">
             {project.technologies.slice(0, 3).map((tech, techIndex) => (
               <Badge
                 key={techIndex}
                 variant="secondary"
-                className="text-xs px-2 py-1 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors shadow-none"
+                className="text-[10px] md:text-xs px-1.5 py-0.5 md:px-2 md:py-1 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors shadow-none"
               >
                 {tech}
               </Badge>
@@ -120,78 +120,66 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.technologies.length > 3 && (
               <Badge
                 variant="outline"
-                className="text-xs px-2 py-1 text-muted-foreground shadow-none"
+                className="text-[10px] md:text-xs px-1.5 py-0.5 md:px-2 md:py-1 text-muted-foreground shadow-none"
               >
-                +{project.technologies.length - 3} more
+                +{project.technologies.length - 3}
               </Badge>
             )}
           </div>
 
-          {/* Mobile & Desktop Action Footer */}
-          <div className="space-y-4">
-            {/* Primary Action Buttons - Always Visible */}
-            <div className="flex md:hidden gap-3">
-              {project.demoLink ? (
+          {/* Action Footer */}
+          <div className="flex items-center justify-between pt-3 md:pt-4 border-t border-border/50">
+            {/* View Details Link */}
+            <Link
+              className="text-xs md:text-sm text-primary hover:text-primary/80 font-semibold inline-flex items-center gap-1.5 md:gap-2 group/link transition-all duration-200 cursor-pointer"
+              href={`/project/${project.id}`}
+            >
+              View Details
+              <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 transition-transform group-hover/link:translate-x-1" />
+            </Link>
+
+            {/* Right side actions */}
+            <div className="flex items-center gap-2 md:gap-4">
+              {/* Mobile: Compact icon buttons */}
+              {project.demoLink && (
                 <motion.a
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${buttonVariants({
-                    variant: "default",
-                    size: "lg",
-                  })} flex-1 text-white !shadow-none`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground transition-colors duration-200"
+                  whileTap={{ scale: 0.9 }}
+                  aria-label="Live Demo"
                 >
-                  <Eye className="w-4 h-4" />
-                  Live Demo
+                  <Eye className="w-3.5 h-3.5" />
                 </motion.a>
-              ) : null}
+              )}
 
               <motion.a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${buttonVariants({
-                  variant: "outline",
-                  size: "lg",
-                })} flex-1 !shadow-none`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-muted text-muted-foreground hover:text-foreground transition-colors duration-200"
+                whileTap={{ scale: 0.9 }}
+                aria-label="Source Code"
               >
-                <Github className="w-4 h-4" />
-                Source Code
+                <Github className="w-3.5 h-3.5" />
               </motion.a>
-            </div>
 
-            {/* Secondary Info - Clean and Minimal */}
-            <div className="flex items-center justify-between pt-4 border-t border-border/50">
-              <motion.div>
-                <Link
-                  className="text-sm text-primary hover:text-primary/80 font-semibold inline-flex items-center gap-2 group/link transition-all duration-200 cursor-pointer"
-                  href={`/project/${project.id}`}
-                >
-                  View Details
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
-                </Link>
-              </motion.div>
+              {/* Desktop: Text links */}
+              <motion.a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground hidden md:inline-flex items-center gap-1.5 transition-colors duration-200 font-medium"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Github className="w-3.5 h-3.5" />
+                Code
+              </motion.a>
 
-              <div className="flex items-center gap-4">
-                <motion.a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground hidden md:inline-flex items-center gap-1.5 transition-colors duration-200 font-medium"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  Code
-                </motion.a>
-
-                <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Star className="w-3.5 h-3.5 text-yellow-500" />
-                  <span className="font-medium">4.8</span>
-                </div>
+              <div className="hidden md:flex items-center gap-1 text-sm text-muted-foreground">
+                <Star className="w-3.5 h-3.5 text-yellow-500" />
+                <span className="font-medium">4.8</span>
               </div>
             </div>
           </div>

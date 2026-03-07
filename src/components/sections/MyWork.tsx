@@ -31,7 +31,7 @@ const MyWork = () => {
   };
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-14 md:py-20 px-4 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_hsl(var(--primary)/0.04)_1px,_transparent_0)] bg-[size:40px_40px]"></div>
 
@@ -46,19 +46,22 @@ const MyWork = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Section Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
+        <motion.div
+          className="text-center mb-10 md:mb-16"
+          variants={itemVariants}
+        >
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-6"
             variants={itemVariants}
           >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-primary font-medium text-sm">
+            <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+            <span className="text-primary font-medium text-xs md:text-sm">
               Featured Projects
             </span>
           </motion.div>
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
             variants={itemVariants}
           >
             My Recent{" "}
@@ -68,7 +71,7 @@ const MyWork = () => {
           </motion.h2>
 
           <motion.p
-            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed hidden md:block"
             variants={itemVariants}
           >
             Explore my latest projects showcasing modern web technologies,
@@ -78,7 +81,7 @@ const MyWork = () => {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8"
           variants={containerVariants}
         >
           {projects.map((project) => (

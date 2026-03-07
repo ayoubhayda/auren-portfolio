@@ -4,7 +4,14 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { Quote, Star, MessageCircle } from "lucide-react";
 import Image from "next/image";
-import { DavidAvatar, EmilyAvatar, JamesAvatar, LisaAvatar, MichaelAvatar, SarahAvatar } from "@/assets/avatars";
+import {
+  DavidAvatar,
+  EmilyAvatar,
+  JamesAvatar,
+  LisaAvatar,
+  MichaelAvatar,
+  SarahAvatar,
+} from "@/assets/avatars";
 
 const Testimonials = () => {
   const containerVariants: Variants = {
@@ -51,7 +58,8 @@ const Testimonials = () => {
       company: "TechCorp Solutions",
       avatar: SarahAvatar,
       rating: 5,
-      testimonial: "Ayoub delivered an exceptional full-stack solution that exceeded our expectations. His attention to detail and technical expertise made our project a huge success. The application is fast, secure, and user-friendly.",
+      testimonial:
+        "Ayoub delivered an exceptional full-stack solution that exceeded our expectations. His attention to detail and technical expertise made our project a huge success. The application is fast, secure, and user-friendly.",
       gradient: "from-blue-500/10 via-indigo-500/10 to-purple-500/10",
       borderGradient: "from-blue-500/20 to-purple-500/20",
     },
@@ -62,7 +70,8 @@ const Testimonials = () => {
       company: "InnovateLab",
       avatar: MichaelAvatar,
       rating: 5,
-      testimonial: "Working with Ayoub was a game-changer for our startup. He built our entire platform from scratch with modern technologies. His problem-solving skills and dedication are truly impressive.",
+      testimonial:
+        "Working with Ayoub was a game-changer for our startup. He built our entire platform from scratch with modern technologies. His problem-solving skills and dedication are truly impressive.",
       gradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10",
       borderGradient: "from-emerald-500/20 to-cyan-500/20",
     },
@@ -71,9 +80,10 @@ const Testimonials = () => {
       name: "Emily Rodriguez",
       role: "Marketing Director",
       company: "Digital Dynamics",
-      avatar: EmilyAvatar, 
+      avatar: EmilyAvatar,
       rating: 5,
-      testimonial: "Our website's performance improved dramatically after Ayoub's optimization work. The SEO improvements and speed enhancements resulted in a 40% increase in organic traffic. Highly recommended!",
+      testimonial:
+        "Our website's performance improved dramatically after Ayoub's optimization work. The SEO improvements and speed enhancements resulted in a 40% increase in organic traffic. Highly recommended!",
       gradient: "from-orange-500/10 via-amber-500/10 to-yellow-500/10",
       borderGradient: "from-orange-500/20 to-yellow-500/20",
     },
@@ -82,9 +92,10 @@ const Testimonials = () => {
       name: "David Thompson",
       role: "CTO",
       company: "CloudTech Systems",
-      avatar: DavidAvatar, 
+      avatar: DavidAvatar,
       rating: 5,
-      testimonial: "Ayoub's expertise in cloud integration and DevOps practices helped us scale our infrastructure seamlessly. His Docker containerization and CI/CD pipeline setup was flawless.",
+      testimonial:
+        "Ayoub's expertise in cloud integration and DevOps practices helped us scale our infrastructure seamlessly. His Docker containerization and CI/CD pipeline setup was flawless.",
       gradient: "from-violet-500/10 via-purple-500/10 to-fuchsia-500/10",
       borderGradient: "from-violet-500/20 to-fuchsia-500/20",
     },
@@ -95,7 +106,8 @@ const Testimonials = () => {
       company: "RetailPro",
       avatar: LisaAvatar, // Replace with actual avatar path
       rating: 5,
-      testimonial: "The e-commerce platform Ayoub developed for us is robust and user-friendly. The admin dashboard and payment integration work perfectly. Our sales have increased by 60% since launch.",
+      testimonial:
+        "The e-commerce platform Ayoub developed for us is robust and user-friendly. The admin dashboard and payment integration work perfectly. Our sales have increased by 60% since launch.",
       gradient: "from-rose-500/10 via-pink-500/10 to-red-500/10",
       borderGradient: "from-rose-500/20 to-red-500/20",
     },
@@ -106,7 +118,8 @@ const Testimonials = () => {
       company: "SecureFlow",
       avatar: JamesAvatar, // Replace with actual avatar path
       rating: 5,
-      testimonial: "Security was our top priority, and Ayoub delivered a bulletproof authentication system. His implementation of JWT security and OAuth integration exceeded our compliance requirements.",
+      testimonial:
+        "Security was our top priority, and Ayoub delivered a bulletproof authentication system. His implementation of JWT security and OAuth integration exceeded our compliance requirements.",
       gradient: "from-slate-500/10 via-gray-500/10 to-zinc-500/10",
       borderGradient: "from-slate-500/20 to-zinc-500/20",
     },
@@ -126,7 +139,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_hsl(var(--primary)/0.03)_1px,_transparent_0)] bg-[size:50px_50px]"></div>
 
@@ -141,19 +154,22 @@ const Testimonials = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Section Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
+        <motion.div
+          className="text-center mb-10 md:mb-16"
+          variants={itemVariants}
+        >
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-6"
             variants={itemVariants}
           >
-            <MessageCircle className="w-4 h-4 text-primary" />
-            <span className="text-primary font-medium text-sm">
+            <MessageCircle className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+            <span className="text-primary font-medium text-xs md:text-sm">
               Client Testimonials
             </span>
           </motion.div>
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
             variants={itemVariants}
           >
             What Clients{" "}
@@ -163,17 +179,18 @@ const Testimonials = () => {
           </motion.h2>
 
           <motion.p
-            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed hidden md:block"
             variants={itemVariants}
           >
-            Don&apos;t just take my word for it. Here&apos;s what my clients have to say
-            about working together and the results we&apos;ve achieved.
+            Don&apos;t just take my word for it. Here&apos;s what my clients
+            have to say about working together and the results we&apos;ve
+            achieved.
           </motion.p>
         </motion.div>
 
         {/* Testimonials Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
           variants={containerVariants}
         >
           {testimonials.map((testimonial, index) => (
@@ -231,7 +248,12 @@ const Testimonials = () => {
                       whileHover={{ scale: 1.1 }}
                     >
                       {/* Placeholder for avatar - replace with actual Image component when you have real avatars */}
-                      <Image src={testimonial.avatar} alt={testimonial.name} width={48} height={48} />
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        width={48}
+                        height={48}
+                      />
                     </motion.div>
 
                     {/* Name and Role */}

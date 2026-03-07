@@ -143,7 +143,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 relative overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto relative z-10"
         variants={containerVariants}
@@ -152,19 +152,22 @@ const Services = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Section Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
+        <motion.div
+          className="text-center mb-10 md:mb-16"
+          variants={itemVariants}
+        >
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-6"
             variants={itemVariants}
           >
-            <Wrench className="w-4 h-4 text-primary" />
-            <span className="text-primary font-medium text-sm">
+            <Wrench className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+            <span className="text-primary font-medium text-xs md:text-sm">
               What I Offer
             </span>
           </motion.div>
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
             variants={itemVariants}
           >
             My{" "}
@@ -174,7 +177,7 @@ const Services = () => {
           </motion.h2>
 
           <motion.p
-            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed hidden md:block"
             variants={itemVariants}
           >
             Comprehensive web development services tailored to bring your
@@ -184,7 +187,7 @@ const Services = () => {
 
         {/* Elegant Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
           variants={containerVariants}
         >
           {services.map((service, index) => (
@@ -195,7 +198,7 @@ const Services = () => {
             >
               {/* Card Container */}
               <motion.div
-                className="relative p-8 rounded-2xl bg-card backdrop-blur-xl border border-border hover:border-primary/30 transition-all duration-500 overflow-hidden h-full"
+                className="relative p-5 md:p-8 rounded-xl md:rounded-2xl bg-card backdrop-blur-xl border border-border hover:border-primary/30 transition-all duration-500 overflow-hidden h-full"
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               >
@@ -203,25 +206,27 @@ const Services = () => {
                 <div className="relative z-10">
                   {/* Icon */}
                   <motion.div
-                    className={`w-16 h-16 rounded-xl ${service.iconBg} backdrop-blur-sm flex items-center justify-center mb-6 border border-white/10`}
+                    className={`w-11 h-11 md:w-16 md:h-16 rounded-lg md:rounded-xl ${service.iconBg} backdrop-blur-sm flex items-center justify-center mb-4 md:mb-6 border border-white/10`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <service.icon className={`w-8 h-8 ${service.iconColor}`} />
+                    <service.icon
+                      className={`w-5 h-5 md:w-8 md:h-8 ${service.iconColor}`}
+                    />
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
+                  <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed text-xs md:text-sm line-clamp-2 md:line-clamp-none">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 md:space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <motion.div
                         key={featureIndex}

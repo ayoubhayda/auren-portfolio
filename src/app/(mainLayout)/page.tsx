@@ -2,7 +2,7 @@
 import SectionSeparator from "@/components/general/SectionSeparator";
 import ServicesBar from "@/components/general/ServicesBar";
 import ContactMe from "@/components/sections/ContactMe";
-import Hero from "@/components/sections/Hero";
+import MainHero from "@/components/sections/MainHero";
 import MyWork from "@/components/sections/MyWork";
 import Services from "@/components/sections/Services";
 import Skills from "@/components/sections/Skills";
@@ -15,7 +15,7 @@ function page() {
       {/* Hero Section */}
       <section id="hero" className="scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Hero />
+          <MainHero />
         </div>
       </section>
 

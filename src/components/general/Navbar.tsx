@@ -13,17 +13,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { 
-  Menu, 
-  ChevronRight, 
-  Home, 
-  Briefcase, 
-  Zap, 
-  Target, 
-  MessageCircle, 
+import {
+  Menu,
+  Home,
+  Briefcase,
+  Zap,
+  Target,
+  MessageCircle,
   Mail,
-  Sparkles,
-  X
+  X,
 } from "lucide-react";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 import { usePathname } from "next/navigation";
@@ -34,22 +32,61 @@ const Navbar = () => {
   const pathName = usePathname();
 
   // Memoize section IDs to prevent recreation on each render
-  const sectionIds = useMemo(() => 
-    ['hero', 'services-bar', 'mywork', 'services', 'skills', 'testimonials', 'contact'], 
-    []
+  const sectionIds = useMemo(
+    () => [
+      "hero",
+      "services-bar",
+      "mywork",
+      "services",
+      "skills",
+      "testimonials",
+    ],
+    [],
   );
-  
+
   const { activeSection, scrollToSection } = useSectionNavigation(sectionIds);
 
   // Enhanced navigation links with Lucide icons
-  const navLinks = useMemo(() => [
-    { name: 'Home', href: '#hero', sectionId: 'hero', icon: Home, description: 'Welcome section' },
-    { name: 'Work', href: '#mywork', sectionId: 'mywork', icon: Briefcase, description: 'Portfolio showcase' },
-    { name: 'Services', href: '#services', sectionId: 'services', icon: Zap, description: 'What I offer' },
-    { name: 'Skills', href: '#skills', sectionId: 'skills', icon: Target, description: 'Technical expertise' },
-    { name: 'Testimonials', href: '#testimonials', sectionId: 'testimonials', icon: MessageCircle, description: 'Client feedback' },
-    { name: 'Contact', href: '#contact', sectionId: 'contact', icon: Mail, description: 'Get in touch' },
-  ], []);
+  const navLinks = useMemo(
+    () => [
+      {
+        name: "Home",
+        href: "#hero",
+        sectionId: "hero",
+        icon: Home,
+        description: "Welcome section",
+      },
+      {
+        name: "Work",
+        href: "#mywork",
+        sectionId: "mywork",
+        icon: Briefcase,
+        description: "Portfolio showcase",
+      },
+      {
+        name: "Services",
+        href: "#services",
+        sectionId: "services",
+        icon: Zap,
+        description: "What I offer",
+      },
+      {
+        name: "Skills",
+        href: "#skills",
+        sectionId: "skills",
+        icon: Target,
+        description: "Technical expertise",
+      },
+      {
+        name: "Testimonials",
+        href: "#testimonials",
+        sectionId: "testimonials",
+        icon: MessageCircle,
+        description: "Client feedback",
+      },
+    ],
+    [],
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,11 +103,11 @@ const Navbar = () => {
   };
 
   const handleContactClick = () => {
-    scrollToSection('contact');
+    scrollToSection("contact");
   };
 
   const handleLogoClick = () => {
-    scrollToSection('hero');
+    scrollToSection("hero");
   };
 
   // Check if current section is active
@@ -89,14 +126,26 @@ const Navbar = () => {
       } sticky top-0 left-0 right-0 z-30 transition-all`}
     >
       <nav
-        className={`flex items-center justify-between py-4 md:py-[18px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
+        className={`flex items-center justify-between h-17  md:h-19 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
       >
-        <button 
+        <button
           onClick={handleLogoClick}
           className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer"
         >
-          <Image src={lightLogo} alt="light-logo" className="dark:hidden" width={40} height={40} />
-          <Image src={darkLogo} alt="dark-logo" className="hidden dark:block" width={40} height={40} />
+          <Image
+            src={lightLogo}
+            alt="light-logo"
+            className="dark:hidden"
+            width={36}
+            height={36}
+          />
+          <Image
+            src={darkLogo}
+            alt="dark-logo"
+            className="hidden dark:block"
+            width={36}
+            height={36}
+          />
           <h1 className="text-2xl font-bold hidden sm:block">
             Aur<span className="text-primary">en</span>
           </h1>
@@ -109,8 +158,8 @@ const Navbar = () => {
               key={index}
               onClick={() => handleNavClick(link.sectionId)}
               className={`text-sm font-medium transition-all duration-300 capitalize relative group cursor-pointer ${
-                isActive(link.sectionId) 
-                  ? "text-primary" 
+                isActive(link.sectionId)
+                  ? "text-primary"
                   : "text-foreground hover:text-primary"
               }`}
             >
@@ -123,10 +172,11 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4 lg:gap-5">
+        <div className="flex items-center gap-3 md:gap-4 lg:gap-5">
           <ThemeToggle />
-          <Button 
-            className="text-white cursor-pointer hover:scale-105 transition-transform duration-200"
+
+          <Button
+            className="hidden lg:inline-flex text-white cursor-pointer hover:scale-105 transition-transform duration-200"
             onClick={handleContactClick}
           >
             Contact Me
@@ -135,90 +185,76 @@ const Navbar = () => {
           {/* Enhanced Mobile menu trigger */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button 
-                variant="outline" 
-                size="icon" 
+              <Button
+                variant="outline"
+                size="icon"
                 className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 relative"
               >
-                <Menu className={`h-5 w-5 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'}`} />
-                <X className={`h-5 w-5 absolute transition-all duration-300 ${isMobileMenuOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'}`} />
+                <Menu
+                  className={`h-5 w-5 transition-all duration-300 ${isMobileMenuOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"}`}
+                />
+                <X
+                  className={`h-5 w-5 absolute transition-all duration-300 ${isMobileMenuOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"}`}
+                />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent 
-              side="right" 
-              className="w-[320px] sm:w-[400px] bg-gradient-to-br from-background via-background/98 to-background/95 backdrop-blur-xl border-l border-border/20 shadow-2xl"
+            <SheetContent
+              side="right"
+              className="w-[280px] sm:w-[320px] bg-background border-l border-border/30 p-0"
             >
-              {/* Enhanced Header */}
-              <SheetHeader className="text-left pb-4 border-b border-border/60">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div>
-                      <SheetTitle className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
-                        Navigation
-                      </SheetTitle>
-                      <SheetDescription className="text-sm text-muted-foreground mt-1">
-                        {pathName === "/" ? "Explore sections" : "Navigate to home sections"}
-                      </SheetDescription>
-                    </div>
-                  </div>
-                </div>
+              {/* Minimal Header */}
+              <SheetHeader className="px-6 pt-6 pb-4">
+                <SheetTitle className="text-lg font-semibold tracking-tight">
+                  Menu
+                </SheetTitle>
+                <SheetDescription className="sr-only">
+                  Site navigation
+                </SheetDescription>
               </SheetHeader>
 
-              {/* Enhanced Navigation Links */}
-              <div className="flex flex-col gap-2 mt-4 px-4">
+              {/* Clean Navigation Links */}
+              <div className="flex flex-col px-3">
                 {navLinks.map((link, index) => {
                   const IconComponent = link.icon;
+                  const active = isActive(link.sectionId);
                   return (
                     <button
                       key={index}
                       onClick={() => handleNavClick(link.sectionId)}
-                      className={`group flex items-center justify-between px-4 py-3 rounded-2xl transition-all duration-300 text-left hover:bg-primary/5 ${
-                        isActive(link.sectionId)
-                          ? "bg-gradient-to-r from-primary/15 to-primary/10 text-primary border border-primary/30"
-                          : "text-foreground border border-border bg-gradient-to-r from-muted/50 to-muted/30 hover:border-primary/20"
+                      className={`group flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 text-left cursor-pointer ${
+                        active
+                          ? "bg-primary/8 text-primary"
+                          : "text-foreground/70 hover:text-foreground hover:bg-muted/50"
                       }`}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className={`p-2.5 rounded-xl transition-all duration-300 group-hover:scale-110 relative ${
-                          isActive(link.sectionId) 
-                            ? 'bg-primary/20 border border-primary/30 scale-110' 
-                            : 'bg-muted border border-border/30 group-hover:bg-primary/10 group-hover:border-primary/20'
-                        }`}>
-                          <IconComponent className={`h-4 w-4 transition-colors duration-300 ${
-                            isActive(link.sectionId) ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'
-                          }`} />
-                          {/* Cross-page indicator */}
-                          {pathName !== "/" && (
-                            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-primary/60 rounded-full opacity-60" />
-                          )}
-                        </div>
-                        <div className="flex flex-col gap-0.5">
-                          <span className="text-base font-semibold">{link.name}</span>
-                          <span className="text-xs text-muted-foreground">
-                            {pathName !== "/" ? `Go to ${link.description}` : link.description}
-                          </span>
-                        </div>
-                      </div>
-                      <ChevronRight className={`h-5 w-5 transition-all duration-300 ${
-                        isActive(link.sectionId) 
-                          ? 'text-primary opacity-100 translate-x-0 scale-110' 
-                          : 'text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-primary'
-                      }`} />
+                      <IconComponent
+                        className={`h-[18px] w-[18px] shrink-0 transition-colors duration-200 ${
+                          active
+                            ? "text-primary"
+                            : "text-muted-foreground group-hover:text-foreground"
+                        }`}
+                      />
+                      <span className="text-[15px] font-medium">
+                        {link.name}
+                      </span>
                     </button>
                   );
                 })}
               </div>
 
-              {/* Enhanced Footer */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="text-center text-xs text-muted-foreground bg-gradient-to-r from-muted/50 via-muted/30 to-muted/50 rounded-xl px-4 py-3 backdrop-blur-sm border border-border/20">
-                  <div className="flex items-center justify-center gap-2">
-                    <Sparkles className="h-3 w-3 text-primary" />
-                    <span>© {new Date().getFullYear()} Auren Portfolio</span>
-                    <Sparkles className="h-3 w-3 text-primary" />
-                  </div>
-                </div>
+              {/* Divider + Contact */}
+              <div className="mx-6 mt-4 pt-4 border-t border-border/40">
+                <Button
+                  className="w-full text-white cursor-pointer transition-all duration-200 hover:opacity-90"
+                  onClick={() => {
+                    handleContactClick();
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <Mail className="h-4 w-4 mr-2" />
+                  Contact Me
+                </Button>
               </div>
             </SheetContent>
           </Sheet>
